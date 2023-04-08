@@ -99,7 +99,7 @@ func main() {
 		c.JSON(200, gin.H{"message": "pong"})
 	})
 
-	handler.Any("/api/*path", proxy)
+	handler.Any("/backend-api/*path", proxy)
 
 	endless.ListenAndServe(os.Getenv("HOST")+":"+PORT, handler)
 }
